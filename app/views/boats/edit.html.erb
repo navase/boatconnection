@@ -1,0 +1,32 @@
+<div class="header">
+  <h1>Edit boat</h1>
+</div>
+
+<%= form_for(@boat) do |boat| %>
+
+<div>
+  <p><%= f.label :name %></p>
+  <%= f.text_field :name %>
+</div>
+
+<div>
+  <p><%= f.label :boat_type %></p>
+  <%= f.text_field :boat_type %>
+</div>
+
+<div>
+  <p><%= f.label :capacity %></p>
+  <%= f.text_field :capacity %>
+</div>
+
+<div>
+  <p><%= f.label :drive %></p>
+  <%= f.text_field :drive %>
+</div>
+
+<div>
+  <%= f.submit "Save changes" %>
+  <%= link_to "Cancel", @boat %>
+</div>
+
+<% end %>

@@ -1,0 +1,32 @@
+<div class="header">
+  <h1>New Boat</h1>
+</div>
+
+<%= form_for (@boat) do |boat| %>
+
+<div>
+  <p><%= f.label :name %></p>
+  <%= f.text_field %></p>
+</div>
+
+<div>
+  <p><%= f.label :boat_type %></p>
+  <%= f.text_field %></p>
+</div>
+
+<div>
+  <p><%= f.label :capacity %></p>
+  <%= f.text_field %></p>
+</div>
+
+<div>
+  <p><%= f.label :drive %></p>
+  <%= f.text_field %></p>
+</div>
+
+<div>
+  <%= f.submit "Save boat" %>
+  <%= link_to "Back", root_path %>
+</div>
+
+<% end %>

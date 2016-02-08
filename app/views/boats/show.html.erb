@@ -4,4 +4,9 @@
 <p>Capacity: <%= @boat.capacity %></p>
 <p>Drive: <%= @boat.drive %></p>
 
-<p><%= link_to "Back", root_path %></p>
+<div class="navigation">
+  <p><%= link_to "Back", root_path %></p>
+  <%= link_to "Edit", edit_boat_path(@boat) %> |
+  <%= link_to "Destroy", destroy_boat_path(@boat), method: :delete %>
+</p>
+</article>
