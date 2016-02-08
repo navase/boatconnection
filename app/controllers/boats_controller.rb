@@ -10,7 +10,7 @@ class BoatsController < ApplicationController
 
   # Create a boat from the boat form params
   def create
-    if @boat = Boat.create(create params)
+    if @boat = Boat.create(boat_params)
       # Redirect_to action
       redirect_to root_path
     else

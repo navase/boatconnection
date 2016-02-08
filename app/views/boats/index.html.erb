@@ -1,5 +1,7 @@
 <h1>Boats</h1>
-
+<br />
+<h3><%= link_to "Click here to add a new boat", new_boat_path %></h3>
+<br />
 <% @boats.each do |boat| %>
   <p><%= image_tag boat.image %></p>
   <h2><%= link_to boat.name, boat %></h2>
