@@ -2,9 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 img {
- width: 100%;
+  width: 100%;
 }
 
 body {
-    padding-top: 50px;
+  padding-top: 50px;
+}
+
+#footer {
+  padding-bottom: 5px;
+  text-align: center;
 }
