@@ -11,3 +11,4 @@ boats = Boat.create([{ name: 'Margot', boat_type: 'Yacht', capacity: 6, drive: '
   { name: 'Chiel', boat_type: 'Sail boat', capacity: 3, drive: 'wind', image: 'chiel.jpg' },
   { name: 'Maurice', boat_type: 'Jet ski', capacity: 2, drive: 'motor', image: 'maurice.jpg' }
   ])
+  
