@@ -1,9 +1,26 @@
-<h1>Boats</h1>
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Sail anywhere!</h1>
+        <p>Do you not own a boat but you want to sail? Or do you own a boat that you don't use for a lot of the time? Rent your boat here!</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
+      </div>
+    </div>
 
-<% @boats.each do |boat| %>
-  <p><%= image_tag boat.image %></p>
-  <h2><%= link_to boat.name, boat %></h2>
-  <p><%= boat.boat_type %></p>
-  <p>Capacity: <%= boat.capacity %></p>
-  <p>Drive: <%= boat.drive %></p>
-<% end %>
+    <div class="container">
+      <div class="row">
+        <% @boats.each do |boat| %>
+          <div class="col-md-4">
+            <h2><%= link_to boat.name, boat %></h2>
+            <p><%= image_tag boat.image %></p>
+            <p><%= boat.boat_type %></p>
+            <p>Capacity: <%= boat.capacity %></p>
+            <p>Drive: <%= boat.drive %></p>
+            <p class="btn btn-default" href="#" role="button"><%= link_to "View details >", boat %></p>
+          </div>
+        <% end %>
+      </div>
+
+      <hr>
+
+    </div>

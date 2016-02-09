@@ -1,7 +1,10 @@
-<h1><%= @boat.name %></h1>
-<p><%= image_tag @boat.image %></p>
-<p><%= @boat.boat_type %></p>
-<p>Capacity: <%= @boat.capacity %></p>
-<p>Drive: <%= @boat.drive %></p>
-
-<p><%= link_to "Back", root_path %></p>
+    <div class="container">
+      <div class="starter-template">
+        <h1><%= @boat.name %></h1>
+        <p><%= image_tag @boat.image %></p>
+        <p><%= @boat.boat_type %></p>
+        <p>Capacity: <%= @boat.capacity %></p>
+        <p>Drive: <%= @boat.drive %></p>
+        <p><%= link_to "Back", root_path %></p>
+      </div>
+    </div>
