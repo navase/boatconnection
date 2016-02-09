@@ -1,10 +1,7 @@
 <h1>Welcome to BoatConnection!</h1>
 <h2>Current boat offers</h2>
-<%= @offers.each do |offer| %>
-  <%= boat = @boats.where(:id => :boat_id)%>
-  <p><%= boat.name %> </p>
+<% @offers.each do |offer| %>
   <p><%= offer.location %></p>
   <p><%= offer.price %></p>
   <p><%= offer.period_start %> - <%= offer.period_end %></p>
 <% end %>
-<%= debug @offers %>
