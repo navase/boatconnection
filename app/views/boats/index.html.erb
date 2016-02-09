@@ -1,9 +1,14 @@
 <h1>Boats</h1>
-
+<!-- <%= debug @offers %> -->
 <% @boats.each do |boat| %>
   <p><%= image_tag boat.image %></p>
   <h2><%= boat.name %></h2>
   <p><%= boat.boat_type %></p>
   <p>Capacity: <%= boat.capacity %></p>
-  <p>Drive:<%= boat.drive %></p>
+  <p>Drive: <%= boat.drive %></p>
+  <ul>
+  <% boat.offerings.each do |offer| %>
+  <li>Price: <%= offer.price %>, from <%= offer.period_start %> until <%= offer.period_end %>. Pick up: <%= offer.location %></li>
+  <% end %>
+  </ul>
 <% end %>
