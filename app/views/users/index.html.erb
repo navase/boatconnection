@@ -1,0 +1,10 @@
+<div class="container">
+  <%= link_to "Add a new user", new_user_path, class: "btn btn-primary btn-lg" %>
+
+  <% @users.each do |user| %>
+    <h2><%= user.first_name %> <%= user.last_name %></h2>
+    <p>Email adress: <%= user.email %></p>
+    <p>Password: <%= user.password %></p>
+    <p class="btn btn-default" role="button"><%= link_to "View details >", user %></p>
+  <% end %>
+</div>

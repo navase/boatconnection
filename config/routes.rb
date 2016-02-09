@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  root 'boats#index'
 
   resources :offerings
 
   resources :boats
-  root 'boats#index'
+  resources :users
+  delete 'users/:id' => 'users#destroy', as: :destroy_user 
 
   # get 'boats/new' => 'boats#new', as: :new_boat
   # post '/boats' => 'boats#create'
