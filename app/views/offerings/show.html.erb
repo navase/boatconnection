@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="starter-template">
+    <h1><%= @offer.boat.name %></h1>
+    <h1><%= @offer.location %></h1>
+    <p><%= @offer.price %></p>
+    <p><%= @offer.period_start %> - <%= @offer.period_end %></p>
+
+    <div class="navigation">
+      <%= link_to "Back", root_path, :class => "btn btn-primary" %> |
+      <%= link_to "Edit", edit_offering_path(@offer), :class => "btn btn-warning" %>
+    </div>
+  </div>
+</div>
