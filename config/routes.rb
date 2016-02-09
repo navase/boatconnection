@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'boats#index'
   resources :boats
+  resources :users
+  delete 'users/:id' => 'users#destroy', as: :destroy_user 
+
   # get 'boats/new' => 'boats#new', as: :new_boat
   # post '/boats' => 'boats#create'
   # get 'boats/:id' => 'boats#show', as: :boat
