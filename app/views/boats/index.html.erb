@@ -17,6 +17,11 @@
             <p><%= boat.boat_type %></p>
             <p>Capacity: <%= boat.capacity %></p>
             <p>Drive: <%= boat.drive %></p>
+  			<ul>
+             <% boat.offerings.each do |offer| %>
+             <li>Price: <%= offer.price %>, from <%= offer.period_start %> until <%= offer.period_end %>. Pick up: <%= offer.location %></li>
+             <% end %>
+            </ul>
             <p class="btn btn-default" href="#" role="button"><%= link_to "View details >", boat %></p>
           </div>
         <% end %>
