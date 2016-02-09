@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  'get' 'offerings#index'
+  resources :offerings
+
   root 'boats#index'
   resources :boats
   # get 'boats/new' => 'boats#new', as: :new_boat
@@ -7,6 +11,7 @@ Rails.application.routes.draw do
   # get 'boats/edit/:id' => 'boats#edit', as: :edit_boat
   # patch 'boats/:id' => 'boats#update', as: :update_boat
   # delete 'boats/:id' => 'boats#destroy', as: :destroy_boat
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
