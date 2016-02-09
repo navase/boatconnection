@@ -1,10 +1,12 @@
 <div class="container">
   <div class="starter-template">
-    <h1><%= @offer.boat.name %></h1>
-    <h1><%= @offer.location %></h1>
-    <p><%= @offer.price %></p>
-    <p><%= @offer.period_start %> - <%= @offer.period_end %></p>
-
+    <h1>Offer for: <%= @offer.boat.name %></h1>
+    <h2>Period: <%= @offer.period_start %> - <%= @offer.period_end %></h2>
+    <p><%= image_tag @offer.boat.image, :class => "img-rounded" %></p>
+    <p>Pick up location: <%= @offer.location %></p>
+    <p>Price: €<%= @offer.price %></p>
+    <p>Capacity: <%= @offer.boat.capacity %> pers.</p>
+    <p>Drive type: <%= @offer.boat.drive %></p>
     <div class="navigation">
       <%= link_to "Back", root_path, :class => "btn btn-primary" %> |
       <%= link_to "Edit", edit_offering_path(@offer), :class => "btn btn-warning" %>
