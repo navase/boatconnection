@@ -4,7 +4,7 @@
   <div class="col-sm-8">
 
 <div class="form-horizontal">
-  <h1>Create New Offer</h1>
+<h1>Create New Offer</h1>
   <%= form_for(@offer) do |f|   %>
     <div class="form-group">
       <%= f.label :boat_id, :class => 'col-sm-2 control-label' %>
@@ -43,10 +43,12 @@
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
           <%= f.submit "Create Offer", :class => "btn btn-warning" %>
-          <%= f.button "Cancel", :class => "btn btn-default" %>
+			<%= f.button "Cancel", :class => "btn btn-default" %>
         </div>
       </div>
   <% end %>
 </div>
+</div>
   </div>
+
 </div>
