@@ -20,8 +20,6 @@ class OfferingsController < ApplicationController
 
   def show
     @offer = Offering.find(params[:id])
-    @offer.build_boat
-    byebug
   end
 
   def edit
