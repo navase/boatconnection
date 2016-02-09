@@ -23,6 +23,12 @@
              <% end %>
             </ul>
             <p class="btn btn-default" href="#" role="button"><%= link_to "View details >", boat %></p>
+			<% boat.offerings.each do |offer| %>
+           <li>Price: <%= offer.price %>, from <%= offer.period_start %> until <%= offer.period_end %>. Pick up: <%= offer.location %></li>
+           <% end %>
+          </ul>
+
+
           </div>
         <% end %>
       </div>
