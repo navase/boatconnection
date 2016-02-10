@@ -24,6 +24,22 @@ h1, h2{
     font-family: 'Courgette', cursive;
   }
 }
+.boat {
+    min-height: 260px;
+    background-size: cover;
+    background-position: center;
+    .cont {
+      position: absolute;
+      bottom: 20px;
+      left: 40px;
+      a{
+        color:white;
+        display: block;
+        padding: 200px 0 0 0;
+        width: 220px;
+      }
+    }
+}
 #footer {
   padding-bottom: 5px;
   text-align: center;
