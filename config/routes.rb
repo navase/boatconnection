@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  'get' 'offerings#index'
   resources :offerings
 
-  root 'boats#index'
   resources :boats
+  root 'boats#index'
+
   # get 'boats/new' => 'boats#new', as: :new_boat
   # post '/boats' => 'boats#create'
   # get 'boats/:id' => 'boats#show', as: :boat
