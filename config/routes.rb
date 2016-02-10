@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root 'boats#index'
   resources :boats
+  resources :reservations
   # get 'boats/new' => 'boats#new', as: :new_boat
   # post '/boats' => 'boats#create'
   # get 'boats/:id' => 'boats#show', as: :boat

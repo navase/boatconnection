@@ -26,6 +26,16 @@ ActiveRecord::Schema.define(version: 20160209140430) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "offerings", force: :cascade do |t|
+    t.integer  "price"
+    t.date     "period_start"
+    t.date     "period_end"
+    t.string   "location"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "boat_id"
+  end
+
   create_table "reservations", force: :cascade do |t|
     t.date     "start_date"
     t.date     "end_date"
