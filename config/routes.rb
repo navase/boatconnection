@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   delete 'users/:id' => 'users#destroy', as: :destroy_user 
 
   resources :reservations
+  resources :reservations
   # get 'boats/new' => 'boats#new', as: :new_boat
   # post '/boats' => 'boats#create'
   # get 'boats/:id' => 'boats#show', as: :boat
