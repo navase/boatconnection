@@ -10,6 +10,11 @@ class ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.create(params)
+    if @reservation = Reservation.create(reservation_params)
+      redirect_to @reservation
+    else
+      render :new
+    end
   end
 
   def show
