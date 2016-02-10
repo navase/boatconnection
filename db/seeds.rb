@@ -13,7 +13,7 @@ boats = Boat.create([{ name: 'Margot', boat_type: 'Yacht', capacity: 6, drive: '
   ])
 
 Reservation.destroy_all
-reservation = Reservation.create([
+reservations = Reservation.create([
   { start_date: DateTime.new(2016, 3, 5), end_date: DateTime.new(2016, 3, 3), number_of_persons: 4 },
   { start_date: DateTime.new(2016, 3, 8), end_date: DateTime.new(2016, 3, 5), number_of_persons: 2 },
   { start_date: DateTime.new(2016, 2, 28), end_date: DateTime.new(2016, 3, 3), number_of_persons: 6 },
