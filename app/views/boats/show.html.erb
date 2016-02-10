@@ -5,7 +5,11 @@
     <p><%= @boat.boat_type %></p>
     <p>Capacity: <%= @boat.capacity %></p>
     <p>Drive: <%= @boat.drive %></p>
-
+    <ul>
+    <% @boat.offerings.each do |offer| %>
+      <li>Price: <%= offer.price %>, from <%= offer.period_start %> until <%= offer.period_end %>. Pick up: <%= offer.location %></li>
+    <% end %>
+  </ul>
     <div class="navigation">
       <%= link_to "Back", root_path, class: "btn btn-default" %>
       <%= link_to "Edit", edit_boat_path(@boat), class: "btn btn-primary" %>

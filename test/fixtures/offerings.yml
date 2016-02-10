@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1
+  period_start: 2016-02-08
+  period_end: 2016-02-08
+  location: MyString
+
+two:
+  price: 1
+  period_start: 2016-02-08
+  period_end: 2016-02-08
+  location: MyString

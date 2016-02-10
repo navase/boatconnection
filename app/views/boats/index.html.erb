@@ -7,18 +7,23 @@
         <%= link_to "Add a new boat", new_boat_path, class: "btn btn-default btn-lg" %>
       </div>
     </div>
-
-    <div class="container">
+<div class="container">
       <div class="row">
         <% @boats.each do |boat| %>
-          <div class="col-md-4">
+          <div class="col-md-3">
             <h2><%= link_to boat.name, boat %></h2>
             <p><%= image_tag boat.image %></p>
-            <p><%= boat.boat_type %></p>
-            <p>Capacity: <%= boat.capacity %></p>
-            <p>Drive: <%= boat.drive %></p>
+            <p><strong>Type:</strong> <%= boat.boat_type %></p>
+            <p><strong>Capacity:</strong> <%= boat.capacity %></p>
+            <p><strong>Drive type:</strong> <%= boat.drive %></p>
             <p class="btn btn-default" href="#" role="button"><%= link_to "View details >", boat %></p>
+			         <% boat.offerings.each do |offer| %>
+           <li><strong>Price:</strong> <%= offer.price %>, from <%= offer.period_start %> until <%= offer.period_end %>. Pick up: <%= offer.location %></li>
+           <% end %>
+          </ul>
+
+
           </div>
         <% end %>
       </div>
-    </div>
+</div>
