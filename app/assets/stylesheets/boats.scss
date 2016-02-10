@@ -7,8 +7,23 @@ img {
 
 body {
   padding-top: 50px;
+  font-family: 'Open Sans', sans-serif;
 }
-
+h1,h2,h3{
+  font-family: 'Lora', serif;
+}
+h1, h2{
+  font-weight: 700;
+  font-style: italic;
+}
+.jumbotron{
+  color: white;
+  background-image: url("./ship.jpeg");
+  background-size: cover;
+  h1{
+    font-family: 'Courgette', cursive;
+  }
+}
 #footer {
   padding-bottom: 5px;
   text-align: center;
