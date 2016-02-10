@@ -26,13 +26,14 @@ ActiveRecord::Schema.define(version: 20160210101242) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "offerings", force: :cascade do |t|
+    t.integer  "price"
+    t.date     "period_start"
+    t.date     "period_end"
+    t.string   "location"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "boat_id"
   end
 
   create_table "offers", force: :cascade do |t|
@@ -46,8 +47,6 @@ ActiveRecord::Schema.define(version: 20160210101242) do
   end
 
   add_index "offers", ["boat_id"], name: "index_offers_on_boat_id", using: :btree
-
-  add_foreign_key "offers", "boats"
 
   create_table "reservations", force: :cascade do |t|
     t.date     "start_date"
@@ -57,17 +56,14 @@ ActiveRecord::Schema.define(version: 20160210101242) do
     t.datetime "updated_at",        null: false
   end
 
-  create_table "offers", force: :cascade do |t|
-    t.integer  "boat_id"
-    t.integer  "price"
-    t.date     "period_start"
-    t.date     "period_end"
-    t.string   "location"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
-
-  add_index "offers", ["boat_id"], name: "index_offers_on_boat_id", using: :btree
 
   add_foreign_key "offers", "boats"
 end
