@@ -39,7 +39,13 @@
 
 <%= render "shared/navigation" %>
 
-<%= yield %>
+<%= yield :jumbtron %>
+
+<div class="container">
+  <div class="row">
+    <%= yield %>
+  </div>
+</div>
 
 <%= render "shared/footer" %>
 
