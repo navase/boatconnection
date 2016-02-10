@@ -6,7 +6,7 @@
     <p>Capacity: <%= @boat.capacity %></p>
     <p>Drive: <%= @boat.drive %></p>
     <ul>
-    <% @boat.offerings.each do |offer| %>
+    <% @boat.offers.each do |offer| %>
       <li>Price: <%= offer.price %>, from <%= offer.period_start %> until <%= offer.period_end %>. Pick up: <%= offer.location %></li>
     <% end %>
   </ul>
