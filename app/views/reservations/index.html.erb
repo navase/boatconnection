@@ -1,0 +1,7 @@
+<% @reservations.each do |reservation| %>
+   <tr>
+     <td><%= reservation.start_date %></td>
+     <td><%= reservation.end_date %></td>
+     <td><%= reservation.number_of_persons %></td>
+   </tr>
+ <% end %>
