@@ -1,13 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  boat_id: 
   price: 1
-  period_start: 2016-02-08
-  period_end: 2016-02-08
+  period_start: 2016-02-10
+  period_end: 2016-02-10
   location: MyString
 
 two:
+  boat_id: 
   price: 1
-  period_start: 2016-02-08
-  period_end: 2016-02-08
+  period_start: 2016-02-10
+  period_end: 2016-02-10
   location: MyString

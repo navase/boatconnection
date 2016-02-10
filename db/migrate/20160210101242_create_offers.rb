@@ -1,6 +1,7 @@
-class CreateOfferings < ActiveRecord::Migration
+class CreateOffers < ActiveRecord::Migration
   def change
-    create_table :offerings do |t|
+    create_table :offers do |t|
+      t.references :boat, index: true, foreign_key: true
       t.integer :price
       t.date :period_start
       t.date :period_end
