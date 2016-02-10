@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :offerings
-
   resources :boats
   root 'boats#index'
+
+  resources :offers
 
   # get 'boats/new' => 'boats#new', as: :new_boat
   # post '/boats' => 'boats#create'

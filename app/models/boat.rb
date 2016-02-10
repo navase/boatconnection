@@ -1,3 +1,3 @@
 class Boat < ActiveRecord::Base
-  has_many :offerings
+  has_many :offers
 end
