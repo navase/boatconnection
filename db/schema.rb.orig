@@ -26,15 +26,7 @@ ActiveRecord::Schema.define(version: 20160209135217) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
-    t.string   "email"
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
+<<<<<<< HEAD
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
@@ -54,4 +46,16 @@ ActiveRecord::Schema.define(version: 20160209135217) do
     t.integer  "boat_id"
   end
 
+||||||| merged common ancestors
+=======
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "password"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+>>>>>>> bb9e8fe149538475f9800ff5b396280ae397b49a
 end
