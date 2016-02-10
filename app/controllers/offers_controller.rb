@@ -1,17 +1,16 @@
-class OfferingsController < ApplicationController
-
+class OffersController < ApplicationController
   #show all offers; we don't use this but page exists
   def index
-    @offers = Offering.all
+    @offers = Offer.all
   end
 
   def new
-    @offer = Offering.new
+    @offer = Offer.new
     @boats = Boat.all
   end
 
   def create
-    if @offer = Offering.create(offer_params)
+    if @offer = Offer.create(offer_params)
       redirect_to root_path
     else
       render :new
@@ -19,16 +18,16 @@ class OfferingsController < ApplicationController
   end
 
   def show
-    @offer = Offering.find(params[:id])
+    @offer = Offer.find(params[:id])
   end
 
   def edit
-    @offer = Offering.find(params[:id])
+    @offer = Offer.find(params[:id])
     @boats = Boat.all
   end
 
   def update
-    @offer = Offering.find(params[:id])
+    @offer = Offer.find(params[:id])
     if @offer.update(offer_params)
       redirect_to @offer
     elsif
@@ -37,12 +36,9 @@ class OfferingsController < ApplicationController
 
   end
 
-
-
   private
 
   def offer_params
-    params.require(:offering).permit(:price, :period_start, :period_end, :location, :boat_id)
+    params.require(:offer).permit(:boat_id, :price, :period_start, :period_end, :location)
   end
-
 end
