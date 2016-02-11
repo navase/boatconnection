@@ -1,7 +1,10 @@
-<div class="container">
-  <div class="starter-template">
+<div class="row">
+  <div class="col-md-3">
+    <%= image_tag @boat.image %>
+  </div>
+  <div class="col-md-9">
     <h1><%= @boat.name %></h1>
-    <p><%= image_tag @boat.image %></p>
+    <%= link_to "Create Offer", new_offer_path, class: "btn btn-info btn-xs" %>
     <p><%= @boat.boat_type %></p>
     <p>Capacity: <%= @boat.capacity %></p>
     <p>Drive: <%= @boat.drive %></p>
