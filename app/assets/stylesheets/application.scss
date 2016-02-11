@@ -5,3 +5,10 @@
 @import "boats.scss";
 @import "offers.scss";
 @import "reservations.scss";
+.alert-alert {
+  @extend .alert-warning;
+}
+
+.alert-notice {
+  @extend .alert-info;
+}
