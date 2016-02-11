@@ -10,7 +10,7 @@
 
 <h2>Browse All Boats </h2>
 <% @boats.in_groups_of(3).each do |boats|   %>
-  <div class="row boats">
+  <div class="row bts">
     <% boats.compact.each do |b| %>
       <div class="col-md-4">
         <h2><%= link_to b.name, b %></h2>
