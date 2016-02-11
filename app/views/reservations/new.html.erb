@@ -3,15 +3,15 @@
 <%= form_for(@reservation) do |f| %>
   <div>
     <%= f.label :start_date %>
-    <%= f.date_select('start_date') %>
+    <%= f.date_select("start_date") %>
   </div>
   <div>
     <%= f.label :end_date %>
-    <%= f.date_select('end_date') %>
+    <%= f.date_select("end_date") %>
   </div>
   <div>
     <%= f.label :number_of_persons %>
-    <%= f.number_field('number_of_persons') %>
+    <%= f.number_field("number_of_persons") %>
   </div>
   <%= f.submit "Save Reservation" %>
   <%= link_to "Back", @reservation %>

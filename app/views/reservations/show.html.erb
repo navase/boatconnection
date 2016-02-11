@@ -1,0 +1,6 @@
+<p><%= @reservation.start_date %></p>
+<p><%= @reservation.end_date %></p>
+<p><%= @reservation.number_of_persons %></p>
+
+<%= link_to "Edit", edit_reservation_path(@reservation) %>
+<%= link_to "Back", reservations_path %>

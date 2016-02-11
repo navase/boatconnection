@@ -1,9 +1,9 @@
 <h1>Edit Reservation</h1>
 
-<%= form_for(@reservation) do |reservation| %>
+<%= form_for(@reservation) do |f| %>
   <div>
     <%= f.label :start_date %>
-    <%= f.start_date :start_date %>
+    <%= f.date_select :start_date %>
   </div>
   <div>
     <%= f.label :end_date %>

@@ -27,7 +27,7 @@ class ReservationsController < ApplicationController
 
   def update
     @reservation = Reservation.find(params[:id])
-    if @reservation.update(user_params)
+    if @reservation.update(reservation_params)
       redirect_to @reservation
     else
       render :edit
