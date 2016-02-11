@@ -1,3 +1,4 @@
 class Offer < ActiveRecord::Base
-  belongs_to :boat
+  has_many :reservations
+  belongs_to :boats
 end
