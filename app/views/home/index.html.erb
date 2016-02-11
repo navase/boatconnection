@@ -1,0 +1,21 @@
+<% content_for :jumbotron do %>
+  <div class="jumbotron">
+    <div class="container">
+      <h1>Sail anywhere!</h1>
+      <p class="lead">Do you not own a boat but you want to sail?<br>Or do you own a boat that you don't use for a lot of the time? Rent your boat here!</p>
+      <%= link_to "List Your Boat", new_boat_path, class: "btn btn-primary btn-lg" %>
+    </div>
+  </div>
+<% end %>
+
+<h2>Browse All Boats </h2>
+<% @boats.in_groups_of(3).each do |boats|   %>
+  <div class="row bts">
+    <% boats.compact.each do |b| %>
+      <div class="col-md-4">
+        <h2><%= link_to b.name, b %></h2>
+        <%= image_tag b.image, :class => "img-responsive" %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
