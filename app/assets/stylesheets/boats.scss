@@ -8,9 +8,6 @@ img {
 body {
   padding-top: 50px;
   font-family: 'Open Sans', sans-serif;
-  &.boats{
-    // margin-top: 20px;
-  }
 }
 h1,h2,h3{
   font-family: 'Lora', serif;
@@ -31,7 +28,7 @@ h1, h2{
     font-weight: 500;
   }
 }
-.row.boats {
+.boats {
   margin-bottom: 30px;
     h2 {
       position: absolute;
