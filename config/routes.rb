@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :boats
   resources :users
-  delete 'users/:id' => 'users#destroy', as: :destroy_user 
+  #delete 'users/:id' => 'users#destroy', as: :destroy_user 
 
   resources :offers
   resources :reservations
