@@ -1,13 +1,15 @@
-<div class="container">
-    <%= link_to "Add a new user", new_user_path, class: "btn btn-default btn-lg" %>
-</div>
-
-<div class="container">
-  <% @users.each do |user| %>
-    <h2><%= link_to user.first_name, user %></h2>
-    <p><%= user.last_name %></p>
-    <p><%= user.email %></p>
-    <p><%= user.password %></p>
-    <p class="btn btn-default" role="button"><%= link_to "View details >", user %></p>
+<h2>All Users</h2>
+<%= link_to "Add User", new_user_path, class: "btn btn-info btn-xs" %>
+  <% @users.in_groups_of(3).each do |users| %>
+    <div class="row">
+      <% users.compact.each do |u| %>
+        <div class="col-md-4">
+          <h2><%= link_to u.first_name, u %></h2>
+          <p><%= u.last_name %></p>
+          <p><%= u.email %></p>
+          <p><%= u.password %></p>
+          <p class="btn btn-default" role="button"><%= link_to "View details >", u %></p>
+        </div>
+      <% end %>
+    </div>
   <% end %>
-</div>
