@@ -1,5 +1,11 @@
-<% @reservations.each do |reservation| %>
-     <p><%= reservation.start_date %></p>
-     <p><%= reservation.end_date %></p>
-     <p><%= reservation.number_of_persons %></p>
+ <h1>All Reservations </h1>
+ <% @reservations.in_groups_of(3).each do |reservations|   %>
+   <div class="row">
+     <% reservations.compact.each do |r| %>
+       <div class="col-md-4">
+         <p><%= r.start_date %> - <%= r.end_date %></p>
+         <p><%= r.number_of_persons %></p>
+       </div>
+     <% end %>
+   </div>
  <% end %>
