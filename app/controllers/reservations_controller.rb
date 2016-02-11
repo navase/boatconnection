@@ -22,6 +22,7 @@ class ReservationsController < ApplicationController
 
   def edit
     @reservation = Reservation.find(params[:id])
+    @offers = Offer.all
   end
 
   def update
@@ -45,7 +46,7 @@ class ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:start_date, :end_date, :number_of_persons)
+    params.require(:reservation).permit(:offer_id, :start_date, :end_date, :number_of_persons)
   end
 
 end
