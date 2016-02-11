@@ -9,7 +9,6 @@ class ReservationsController < ApplicationController
   end
 
   def create
-    @reservation = Reservation.create(params)
     if @reservation = Reservation.create(reservation_params)
       redirect_to @reservation
     else
