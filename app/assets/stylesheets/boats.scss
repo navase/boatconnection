@@ -20,23 +20,22 @@ h1, h2{
   color: white;
   background-image: url("./ship.jpeg");
   background-size: cover;
+  text-align: center;
   h1{
     font-family: 'Courgette', cursive;
   }
+  .lead{
+    font-weight: 500;
+  }
 }
-.boat {
-    min-height: 260px;
-    background-size: cover;
-    background-position: center;
-    .cont {
+.boats {
+  margin-bottom: 30px;
+    h2 {
       position: absolute;
       bottom: 20px;
       left: 40px;
       a{
         color:white;
-        display: block;
-        padding: 200px 0 0 0;
-        width: 220px;
       }
     }
 }

@@ -35,13 +35,13 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <body>
+  <body class="<% params[:controller] %>">
 
 <%= render "shared/navigation" %>
 
-<%= yield :jumbtron %>
+<%= yield :jumbotron %>
 
-<div class="container">
+<div class="container" >
   <%= yield %>
 </div>
 

@@ -1,7 +1,12 @@
-<h1>Welcome to BoatConnection!</h1>
-<h2>Current boat offers</h2>
-<% @offers.each do |offer| %>
-  <p><%= offer.location %></p>
-  <p><%= offer.price %></p>
-  <p><%= offer.period_start %> - <%= offer.period_end %></p>
+<h2>All Offers </h2>
+<% @offers.in_groups_of(3).each do |offers|   %>
+  <div class="row">
+    <% offers.compact.each do |o| %>
+      <div class="col-md-4">
+        <p><%= o.location %></p>
+        <p><%= o.price %></p>
+        <p><%= o.period_start %> - <%= o.period_end %></p>
+      </div>
+    <% end %>
+  </div>
 <% end %>
