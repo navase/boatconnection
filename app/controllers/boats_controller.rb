@@ -13,6 +13,7 @@ class BoatsController < ApplicationController
     if @boat = Boat.create(boat_params)
       # Redirect_to action
       redirect_to root_path
+      #redirect_to @boat, notice: "Boat succesfully added!"
     else
       render :new
     end
