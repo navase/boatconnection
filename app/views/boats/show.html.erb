@@ -10,7 +10,7 @@
     <p>Drive: <%= @boat.drive %></p>
     <ul>
     <% @boat.offers.each do |offer| %>
-      <li>Price: <%= offer.price %>, from <%= offer.period_start %> until <%= offer.period_end %>. Pick up: <%= offer.location %></li>
+      <li>Price: <%= offer.price %>, from <%= offer.period_start %> until <%= offer.period_end %>. Pick up: <%= offer.location %> <%= link_to "Make Reservation", new_reservation_path %></li>
     <% end %>
   </ul>
     <div class="navigation">
