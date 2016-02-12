@@ -3,7 +3,7 @@
    <div class="row">
      <% reservations.compact.each do |r| %>
        <div class="col-md-4">
-         <p><%= r.start_date %> - <%= r.end_date %></p>
+         <p><%= r.start_date%> - <%= r.end_date %></p>
          <p><%= r.number_of_persons %></p>
        </div>
      <% end %>
