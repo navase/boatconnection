@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  has_many :boats
-  has_many :reservations
-  has_many :offers, through: :boats
+  has_many :boats, dependent: :destroy
+  has_many :reservations, dependent: :destroy
 end
