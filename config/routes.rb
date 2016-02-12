@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'home#index'
+  root 'boats#index'
   resources :boats
   resources :users
   #delete 'users/:id' => 'users#destroy', as: :destroy_user
