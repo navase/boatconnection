@@ -25,6 +25,11 @@
 </div>
 
 <div>
+  <p><%= f.label :boat %></p>
+  <%= f.file_field :boat %>
+</div>
+
+<div>
   <%= f.submit "Save changes" %>
   <%= link_to "| Cancel |", @boat %>
 </div>
